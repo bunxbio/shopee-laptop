@@ -1,5 +1,5 @@
 pages << {
-  url: 'https://shopee.co.id/Laptop-col.832738',
+  url: 'https://shopee.co.id/Laptop-col.832738?page=0',
   page_type: 'listings',
   fetch_type: 'browser',
   method: 'GET',
