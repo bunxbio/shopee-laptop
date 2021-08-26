@@ -21,7 +21,7 @@ await page.evaluate('window.scrollBy(0,1200)'); await sleep(1000);
 await page.evaluate('window.scrollBy(0,1200)'); await sleep(1000);
 await page.evaluate('window.scrollBy(0,1200)'); await sleep(1000);
 await page.evaluate(() => {
-    for (const script of document.querySelectorAll('script')) {
+    for (const script of document.querySelectorAll('script[type=\"text/javascript\"]')) {
         script.parentNode.removeChild(script);
     }
   });
