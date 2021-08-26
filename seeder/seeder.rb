@@ -9,6 +9,23 @@ pages << {
   },
   driver: {
     enable_images: true,
-    code: "await page.setJavascriptEnabled(false);"
+    code: "await sleep(2000);
+await page.evaluate('window.scrollBy(0,500)'); await sleep(1000);  
+await page.evaluate('window.scrollBy(0,500)'); await sleep(1000);
+await page.evaluate('window.scrollBy(0,500)'); await sleep(1000);
+await page.evaluate('window.scrollBy(0,500)'); await sleep(1000);
+await page.evaluate('window.scrollBy(0,500)'); await sleep(1000);
+await page.evaluate('window.scrollBy(0,500)'); await sleep(1000);
+await page.evaluate('window.scrollBy(0,500)'); await sleep(1000);
+await page.evaluate('window.scrollBy(0,500)'); await sleep(1000);
+await page.evaluate('window.scrollBy(0,500)'); await sleep(1000);
+await page.evaluate('window.scrollBy(0,500)'); await sleep(1000);
+await page.evaluate(() => {
+    for (const script of document.querySelectorAll('script')) {
+        script.parentNode.removeChild(script);
+    }
+  });
+await sleep(1000);
+"
   }
 }
