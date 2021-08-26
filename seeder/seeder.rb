@@ -9,7 +9,6 @@ pages << {
   },
   driver: {
     enable_images: true,
-    goto_options: {"timeout": 2000},
-    code: "await page.evaluate('window.scrollBy(0,1200)'); await sleep(1000); await page.evaluate('window.scrollBy(0,1200)'); await sleep(1000);"
+    code: "await page.evaluate(() => {debugger;});"
   }
 }
