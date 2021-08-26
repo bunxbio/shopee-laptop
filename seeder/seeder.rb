@@ -9,6 +9,6 @@ pages << {
   },
   driver: {
     enable_images: true,
-    code: "await page.evaluate(() => {debugger;});"
+    code: "await page.setJavascriptEnabled(false);"
   }
 }
