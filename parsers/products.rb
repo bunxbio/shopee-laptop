@@ -44,7 +44,8 @@ stock_check = nokogiri.at_css('._90fTvx > div:nth-child(2) > div:nth-child(2)')
 stock = stock_check ? stock_check.text.scan(/\d+/).first.to_i : nil
 product['stock'] = stock
 
-img_url = nokogiri.at_css('._3Q7kBy').attr('style')
+img_url = nokogiri.at_css('._3Q7kBy')
+img_url = img_url ? img_url.attr('style') : nokogiri.at_css('._3-_YTZ div div._12uy03').attr('style')
 product['img_url'] = img_url.to_s.scan(/https?[^"]*/).first
 
 product['seller'] = nokogiri.at_css('._3uf2ae').text.strip
