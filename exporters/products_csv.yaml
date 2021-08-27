@@ -1,0 +1,5 @@
+exporter_name: products_csv
+exporter_type: csv
+collection: products
+offset: 0
+order: desc

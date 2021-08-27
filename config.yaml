@@ -13,3 +13,5 @@ parsers:
 
 exporters:
   - file: ./exporters/products_json.yaml
+
+  - file: ./exporters/products_csv.yaml
