@@ -48,7 +48,7 @@ current_page_url = page['url'].to_s
 current_page_num = current_page_url.scan(/\d+/).last.to_i
 next_page = "https://shopee.co.id/Laptop-col.832738?page=#{current_page_num + 1}"
 
-if next_page <= LIMIT_PAGE
+if current_page_num <= LIMIT_PAGE
 	pages << {
 		url: next_page,
 		page_type: 'listings',
