@@ -15,6 +15,7 @@ discount = discount_check ? discount_check.text.strip.split(' ').first : nil
 product['discount'] = discount
 
 original_price_check = nokogiri.at_css('._2MaBXen')
+original_price_check = original_price_check ? original_price_check : nokogiri.at_css('._2MaBXe')
 if original_price_check
 	original_price = original_price_check.text.strip.gsub('Rp', '')
 	if original_price.include? '.'
