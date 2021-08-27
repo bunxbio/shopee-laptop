@@ -40,7 +40,7 @@ orders_count = orders_count_check ? orders_count_check.text.strip.to_i : nil
 product['orders_count'] = orders_count == 0 ? nil : orders_count
 
 stock_check = nokogiri.at_css('._90fTvx > div:nth-child(2) > div:nth-child(2)')
-stock = stock_check ? stock_check.text.scan(/\d+/).first : nil
+stock = stock_check ? stock_check.text.scan(/\d+/).first.to_i : nil
 product['stock'] = stock
 
 img_url = nokogiri.at_css('._3Q7kBy').attr('style')
